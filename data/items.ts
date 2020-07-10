@@ -307,7 +307,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		fling: {
 			basePower: 80,
 		},
-		onModifyDefPriorityPriority: 1,
+		onModifyDefPriority: 1,
 		onModifyDef(def) {
 			return this.chainModify(1.5);
 		},
