@@ -301,6 +301,27 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		gen: 6,
 		desc: "Holder's Sp. Def is 1.5x, but it can only select damaging moves.",
 	},
+	battlearmor: {
+		name: "Battle Armor",
+		spritenum: 581,
+		fling: {
+			basePower: 80,
+		},
+		onModifyDefPriorityPriority: 1,
+		onModifyDef(def) {
+			return this.chainModify(1.5);
+		},
+		onDisableMove(pokemon) {
+			for (const moveSlot of pokemon.moveSlots) {
+				if (this.dex.getMove(moveSlot.move).category === 'Status') {
+					pokemon.disableMove(moveSlot.id);
+				}
+			}
+		},
+		num: 1000,
+		gen: 6,
+		desc: "Holder's Def is 1.5x, but it can only select damaging moves.",
+	},
 	audinite: {
 		name: "Audinite",
 		spritenum: 617,
