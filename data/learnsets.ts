@@ -51655,6 +51655,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			teeterdance: ["8L1", "7L10", "6L10", "5L10"],
 			toxic: ["7M", "6M", "5M"],
 			worryseed: ["7T", "6T", "5T"],
+			mysticalfire: ["8T"],
 		},
 	},
 	basculin: {
@@ -70402,6 +70403,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			wildcharge: ["7M", "7L32"],
 			withdraw: ["7L1"],
 			workup: ["7M"],
+			risingvoltage: ["8T"],
 		},
 		eventData: [
 			{generation: 7, level: 60, moves: ["naturesmadness", "discharge", "agility", "electroball"]},
@@ -70473,6 +70475,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			toxic: ["7M"],
 			withdraw: ["7L1"],
 			wonderroom: ["7T"],
+			expandingforce: ["8T"],
 		},
 		eventData: [
 			{generation: 7, level: 60, moves: ["naturesmadness", "extrasensory", "flatter", "moonblast"]},
@@ -70550,6 +70553,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			workup: ["7M"],
 			worryseed: ["7T"],
 			zenheadbutt: ["7T", "7L48", "7S0", "7S1"],
+			grassyglide: ["8T"],
 		},
 		eventData: [
 			{generation: 7, level: 60, moves: ["naturesmadness", "zenheadbutt", "megahorn", "skullbash"]},
@@ -70622,6 +70626,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			whirlpool: ["7L14"],
 			withdraw: ["7L1"],
 			wonderroom: ["7T"],
+			mistyexplosion: ["8T"],
 		},
 		eventData: [
 			{generation: 7, level: 60, moves: ["naturesmadness", "muddywater", "aquaring", "hydropump"]},
