@@ -3238,7 +3238,7 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: 146,
 	},
-	sandhunter: {
+	/* sandhunter: {
 		desc: "In Sandstorm this pokemon ferosiously hunts its pray at faster speeds and higher intensity. This Pokemon takes no damage from Sandstorm.",
 		shortDesc: "This Pokemon's Ground/Rock/Steel attacks do 1.3x in Sandstorm and its speed is 1.5x; immunity to it.",
 		onBasePowerPriority: 21,
@@ -3261,7 +3261,7 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 		name: "Sand Hunter",
 		rating: 2,
 		num: 800,
-	},
+	}, */
 	sandspit: {
 		desc: "When this Pokemon is hit by an attack, Sandstorm begins. This effect happens after the effects of Max and G-Max Moves.",
 		shortDesc: "When this Pokemon is hit, Sandstorm begins.",

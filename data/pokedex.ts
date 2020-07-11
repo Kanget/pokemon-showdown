@@ -5818,7 +5818,7 @@ export const BattlePokedex: {[speciesid: string]: SpeciesData} = {
 		forme: "Mega",
 		types: ["Ground", "Dragon"],
 		baseStats: {hp: 80, atk: 130, def: 90, spa: 115, spd: 90, spe: 115},
-		abilities: {0: "Sand Hunter"},
+		abilities: {0: "Sand Force"},
 		heightm: 2.3,
 		weightkg: 100.1,
 		color: "Green",
