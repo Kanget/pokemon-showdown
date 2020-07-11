@@ -10633,6 +10633,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			wonderroom: ["8M"],
 			yawn: ["8L9"],
 			zenheadbutt: ["8M", "8L24"],
+			teleport: ["8M"],
 		},
 	},
 	slowbro: {
@@ -10868,6 +10869,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			wonderroom: ["8M"],
 			yawn: ["8L9"],
 			zenheadbutt: ["8M", "8L24"],
+			teleport: ["8M"],
 		},
 	},
 	slowking: {
@@ -25166,6 +25168,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			uproar: ["7T", "6T", "5T", "4T"],
 			willowisp: ["7M", "6M", "5M", "4M"],
 			wonderroom: ["7T", "6T", "5T"],
+			focusblast: ["8M"],
 		},
 	},
 	unown: {
@@ -27478,6 +27481,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			whirlpool: ["8M", "7V", "4M"],
 			wrap: ["8L1"],
 			wringout: ["7L28", "6L28", "5L36", "4L36"],
+			octolock: ["8M"],
 		},
 		eventData: [
 			{generation: 4, level: 50, gender: "F", nature: "Serious", abilities: ["suctioncups"], moves: ["octazooka", "icebeam", "signalbeam", "hyperbeam"], pokeball: "cherishball"},
@@ -30115,6 +30119,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			waterpulse: ["7T", "6T", "4M", "3M"],
 			whirlpool: ["4M"],
 			workup: ["7M"],
+			liquidation: ["8M"],
 		},
 		eventData: [
 			{generation: 5, level: 50, shiny: 1, moves: ["earthquake", "icebeam", "hydropump", "hammerarm"], pokeball: "cherishball"},
@@ -47837,7 +47842,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			{generation: 6, level: 15, moves: ["quickattack", "swagger", "vcreate"], pokeball: "cherishball"},
 			{generation: 7, level: 15, moves: ["vcreate", "reversal", "storedpower", "celebrate"], pokeball: "cherishball"},
 		],
-		eventOnly: true,
+		eventOnly: false,
 	},
 	snivy: {
 		learnset: {
@@ -49057,6 +49062,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			vinewhip: ["7L10", "6L10", "5L10", "5S1"],
 			workup: ["7M", "5M"],
 			worryseed: ["7T", "6T", "5T"],
+			woodhammer: ["8M"],
 		},
 		eventData: [
 			{generation: 5, level: 1, shiny: 1, gender: "M", nature: "Brave", ivs: {spa: 31}, moves: ["bulletseed", "bite", "solarbeam", "dig"], pokeball: "pokeball"},
@@ -50881,6 +50887,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			venoshock: ["8M", "7M", "6M", "5M"],
 			waterpulse: ["7T", "6T"],
 			weatherball: ["8M"],
+			flipturn: ["8M"],
 		},
 		encounters: [
 			{generation: 5, level: 15},

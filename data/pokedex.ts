@@ -10385,7 +10385,7 @@ export const BattlePokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Chandelure",
 		types: ["Ghost", "Fire"],
 		baseStats: {hp: 60, atk: 55, def: 90, spa: 145, spd: 90, spe: 80},
-		abilities: {0: "Flash Fire", 1: "Flame Body", H: "Infiltrator"},
+		abilities: {0: "Flash Fire", 1: "Shadow Tag", H: "Infiltrator"},
 		heightm: 1,
 		weightkg: 34.3,
 		color: "Black",
