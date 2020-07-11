@@ -25169,6 +25169,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			willowisp: ["7M", "6M", "5M", "4M"],
 			wonderroom: ["7T", "6T", "5T"],
 			focusblast: ["8M"],
+			Hypnosis: ["8M"],
 		},
 	},
 	unown: {
@@ -39714,6 +39715,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			waterfall: ["7M", "6M", "5M", "4M", "3M"],
 			waterpulse: ["7T", "7L14", "6T", "6L14", "5L15", "4M", "4L15", "3M", "3L22"],
 			whirlpool: ["7L1", "6L1", "5L1", "4M", "4L1", "3L1"],
+			thunderfang: ["8M"],
 		},
 	},
 	gorebyss: {
@@ -44497,6 +44499,9 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			uturn: ["7M", "6M", "5M", "4M"],
 			waterpulse: ["7T", "6T", "4M"],
 			workup: ["7M", "5M"],
+			closecombat: ["8M"],
+			earthquake: ["8M"],
+			bulkup: ["8M"],
 		},
 		encounters: [
 			{generation: 6, level: 32, maxEggMoves: 1},
@@ -44837,6 +44842,8 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			weatherball: ["8M", "8L1"],
 			wonderroom: ["8M", "7T", "6T", "5T"],
 			zenheadbutt: ["8M", "7T", "6T", "5T", "4T"],
+			healbell: ["8M"],
+			boomburst: ["8M"],
 		},
 		encounters: [
 			{generation: 6, level: 30},
@@ -44903,6 +44910,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			uproar: ["7T", "7L45", "6T", "6L45", "5T", "5L45", "4T", "4L37"],
 			uturn: ["7M", "6M", "5M", "4M"],
 			workup: ["7M", "5M"],
+			overdrive: ["8M"],
 		},
 		eventData: [
 			{generation: 4, level: 25, gender: "M", nature: "Jolly", abilities: ["keeneye"], moves: ["mirrormove", "furyattack", "chatter", "taunt"]},
@@ -46016,6 +46024,9 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			vinewhip: ["7L11", "6L11", "5L11", "4L11"],
 			worryseed: ["7T", "7E", "6T", "6E", "5T", "5E", "4T", "4E"],
 			wringout: ["7L47", "6L47", "5L47", "4L41"],
+			snaptrap: ["8M"],
+			firefang: ["8M"],
+			jawlock: ["8M"],
 		},
 	},
 	finneon: {
@@ -52688,6 +52699,8 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			toxic: ["7M", "6M", "5M"],
 			workup: ["8M", "7M", "5M"],
 			zenheadbutt: ["8M", "7T", "6T", "5T"],
+			suckerpunch: ["8M"],
+			gunkshot: ["8M"],
 		},
 		eventData: [
 			{generation: 5, level: 50, gender: "M", nature: "Brave", abilities: ["moxie"], moves: ["firepunch", "payback", "drainpunch", "substitute"], pokeball: "cherishball"},

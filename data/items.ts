@@ -2187,6 +2187,21 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		isNonstandard: "Past",
 		desc: "If held by a Flygon, this item allows it to Mega Evolve in battle.",
 	},
+	roseradite: {
+		name: "Roseradite",
+		spritenum: 587,
+		megaStone: "Roserade-Mega",
+		megaEvolves: "Roserade",
+		itemUser: ["Flygon"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -2,
+		gen: 6,
+		isNonstandard: "Past",
+		desc: "If held by a Roserade, this item allows it to Mega Evolve in battle.",
+	},
 	gengarite: {
 		name: "Gengarite",
 		spritenum: 588,
