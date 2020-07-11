@@ -2189,7 +2189,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 	},
 	roseradite: {
 		name: "Roseradite",
-		spritenum: 587,
+		spritenum: 607,
 		megaStone: "Roserade-Mega",
 		megaEvolves: "Roserade",
 		itemUser: ["Flygon"],
@@ -2197,7 +2197,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;
 		},
-		num: -2,
+		num: -3,
 		gen: 6,
 		isNonstandard: "Past",
 		desc: "If held by a Roserade, this item allows it to Mega Evolve in battle.",
@@ -2216,6 +2216,21 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		gen: 6,
 		isNonstandard: "Past",
 		desc: "If held by a Gengar, this item allows it to Mega Evolve in battle.",
+	},
+	butterfreeite: {
+		name: "Butterfreeite",
+		spritenum: 588,
+		megaStone: "Butterfree-Mega",
+		megaEvolves: "Butterfree",
+		itemUser: ["Butterfree"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 656,
+		gen: 6,
+		isNonstandard: "Past",
+		desc: "If held by a Butterfree, this item allows it to Mega Evolve in battle.",
 	},
 	ghostgem: {
 		name: "Ghost Gem",

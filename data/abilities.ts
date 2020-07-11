@@ -506,6 +506,13 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 	corrosion: {
 		shortDesc: "This Pokemon can poison or badly poison other Pokemon regardless of their typing.",
 		// Implemented in sim/pokemon.js:Pokemon#setStatus
+		onModifyMovePriority: -5,
+		onModifyMove(move) {
+			if (!move.ignoreImmunity) move.ignoreImmunity = {};
+			if (move.ignoreImmunity !== true) {
+				move.ignoreImmunity['Steel'] = true;
+			}
+		},
 		name: "Corrosion",
 		rating: 2.5,
 		num: 212,

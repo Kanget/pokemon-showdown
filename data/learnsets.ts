@@ -23557,6 +23557,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			voltswitch: ["7M", "6M", "5M"],
 			wildcharge: ["7M", "6M", "5M"],
 			zapcannon: ["7L1", "7V", "6L1"],
+			tailglow: ["8M"],
 		},
 	},
 	azurill: {
@@ -32165,6 +32166,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			workup: ["8M", "7M", "5M"],
 			xscissor: ["8M", "7M", "6M", "5M", "4M"],
 			zenheadbutt: ["8M", "7T", "6T", "5T", "4T"],
+			playrough: ["8M"],
 		},
 	},
 	surskit: {
@@ -53367,6 +53369,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			uturn: ["7M", "7L45", "6M", "6L45", "5M", "5L45"],
 			wingattack: ["7L1", "6L1", "5L1"],
 			zenheadbutt: ["7T", "6T"],
+			bravebird: ["8M"],
 		},
 	},
 	trubbish: {
@@ -58662,6 +58665,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			workup: ["8M", "8L1", "7M", "7L49", "6L1", "5M", "5L61", "5S2"],
 			xscissor: ["8M", "7M", "6M", "5M"],
 			zenheadbutt: ["8M", "7T", "6T", "5T"],
+			accelerock: ["8M"],
 		},
 		eventData: [
 			{generation: 5, level: 42, shiny: 1, moves: ["helpinghand", "retaliate", "rockslide", "sacredsword"]},
