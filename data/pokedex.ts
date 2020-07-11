@@ -7109,7 +7109,7 @@ export const BattlePokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Roserade-Mega",
 		baseSpecies: "Roserade",
 		forme: "Mega",
-		types: ["Grass". "Poison"],
+		types: ["Grass", "Poison"],
 		baseStats: {hp: 60, atk: 85, def: 95, spa: 145, spd: 120, spe: 110},
 		abilities: {0: "Technician"},
 		heightm: 1.8,
