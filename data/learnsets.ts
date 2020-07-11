@@ -46026,7 +46026,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			wringout: ["7L47", "6L47", "5L47", "4L41"],
 			snaptrap: ["8M"],
 			jawlock: ["8M"],
-			firefang ["8M"],
+			firefang: ["8M"],
 		},
 	},
 	finneon: {
