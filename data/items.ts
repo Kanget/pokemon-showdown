@@ -318,7 +318,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 				}
 			}
 		},
-		num: 1000,
+		num: -1,
 		gen: 6,
 		desc: "Holder's Def is 1.5x, but it can only select damaging moves.",
 	},
