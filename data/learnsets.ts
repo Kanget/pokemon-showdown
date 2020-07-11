@@ -80660,7 +80660,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 	},
 	pokestarufopropu2: {
 		eventData: [
-			{generation: 5, level: 47, moves: ["darkpulse", "flamethrower", "hyperbeam", "icebeam"]},
-		],
-	},
+			{generation: 5, level: 47, moves: ["darkpulse", "flamethrower", "hyperbeam", "icebeam"]}
+		]
+	}
 };
