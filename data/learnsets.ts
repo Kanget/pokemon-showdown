@@ -40427,7 +40427,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			{generation: 6, level: 50, isHidden: true, moves: ["explosion", "icepunch", "stoneedge", "hammerarm"], pokeball: "pokeball"},
 			{generation: 7, level: 60, shiny: 1, moves: ["stoneedge", "hammerarm", "lockon", "zapcannon"]},
 		],
-		eventOnly: true,
+		eventOnly: false,
 	},
 	regice: {
 		learnset: {
