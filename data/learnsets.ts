@@ -47036,7 +47036,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			{generation: 7, level: 60, moves: ["zenheadbutt", "revenge", "dizzypunch", "confuseray"], pokeball: "cherishball"},
 			{generation: 7, level: 100, moves: ["crushgrip", "drainpunch", "zenheadbutt", "heavyslam"], pokeball: "cherishball"},
 		],
-		eventOnly: true,
+		eventOnly: false,
 	},
 	giratina: {
 		learnset: {
