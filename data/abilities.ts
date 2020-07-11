@@ -3250,6 +3250,7 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 				}
 			}
 		},
+		onModifySpe(spe, pokemon) {
 			if (this.field.isWeather('sandstorm')) {
 				return this.chainModify(1.5);
 			}
