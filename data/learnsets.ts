@@ -19179,7 +19179,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			{generation: 8, level: 88},
 		],
 	},
-	porygon8: {
+	porygon2: {
 		learnset: {
 			aerialace: ["7M", "6M", "5M", "8M", "8M"],
 			agility: ["8M", "8L80", "7L88", "7V", "6L88", "5L88", "8L88", "8L9"],
