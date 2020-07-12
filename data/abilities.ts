@@ -1718,7 +1718,7 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 			if (effect.id === 'intimidate') {
 				delete boost.atk;
 				this.add('-immune', target, '[from] ability: Inner Focus');
-			},
+			}
 			if (effect.id === 'focusbreak') {
 				delete boost.spa;
 				this.add('-immune', target, '[from] ability: Inner Focus');
@@ -2536,7 +2536,7 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 			if (effect.id === 'intimidate') {
 				delete boost.atk;
 				this.add('-immune', target, '[from] ability: Oblivious');
-			},
+			}
 			if (effect.id === 'focusbreak') {
 				delete boost.spa;
 				this.add('-immune', target, '[from] ability: Oblivious');
