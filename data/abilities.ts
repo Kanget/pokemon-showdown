@@ -1820,12 +1820,32 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['punch']) {
 				this.debug('Iron Fist boost');
-				return this.chainModify([0x1333, 0x1000]);
+				return this.chainModify([0x1800, 0x1000]);
 			}
 		},
 		name: "Iron Fist",
 		rating: 3,
 		num: 89,
+	},
+	kicker: {
+		desc: "This Pokemon's kick-based attacks have their power multiplied by 1.5.",
+		shortDesc: "This Pokemon's kick-based attacks have 1.5x power and accuracy multiplied by 0.8x",
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['kick']) {
+				this.debug('Way of the Fist boost');
+				return this.chainModify([0x1800, 0x1000]);
+			}
+		},
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.flags === 'kick' && typeof move.accuracy === 'number') {
+				move.accuracy *= 0.8;
+			}
+		},
+		name: "Way of the Fist",
+		rating: 3,
+		num: -5,
 	},
 	justified: {
 		shortDesc: "This Pokemon's Attack is raised by 1 stage after it is damaged by a Dark-type move.",
@@ -2311,6 +2331,18 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 		name: "Moxie",
 		rating: 3.5,
 		num: 153,
+	},
+	valor: {
+		desc: "This Pokemon's Sp. Attack is raised by 1 stage if it attacks and knocks out another Pokemon.",
+		shortDesc: "This Pokemon's Sp. Attack is raised by 1 stage if it attacks and KOes another Pokemon.",
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				this.boost({spa: length}, source);
+			}
+		},
+		name: "Valor",
+		rating: 3.5,
+		num: -10,
 	},
 	multiscale: {
 		shortDesc: "If this Pokemon is at full HP, damage taken from attacks is halved.",
@@ -4021,7 +4053,7 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 	surgesurfer: {
 		shortDesc: "If Electric Terrain is active, this Pokemon's Speed is doubled.",
 		onModifySpe(spe) {
-			if (this.field.isTerrain('electricterrain')) {
+			if (this.field.isTerrain('electricterrain','psychicterrain','grassyterrain','mistyterrain')) {
 				return this.chainModify(2);
 			}
 		},

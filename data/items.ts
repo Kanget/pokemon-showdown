@@ -705,6 +705,21 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		isNonstandard: "Past",
 		desc: "If held by a Camerupt, this item allows it to Mega Evolve in battle.",
 	},
+	bisharpite: {
+		name: "Bisharpite",
+		spritenum: 625,
+		megaStone: "Bisharp-Mega",
+		megaEvolves: "Bisharp",
+		itemUser: ["Bisharp"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -9,
+		gen: 6,
+		isNonstandard: "Past",
+		desc: "If held by a Bisharp, this item allows it to Mega Evolve in battle.",
+	},
 	cellbattery: {
 		name: "Cell Battery",
 		spritenum: 60,
@@ -5493,6 +5508,21 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		gen: 6,
 		isNonstandard: "Past",
 		desc: "If held by a Slowbro, this item allows it to Mega Evolve in battle.",
+	},
+	slowkinite: {
+		name: "Slowkinite",
+		spritenum: 620,
+		megaStone: "Slowking-Mega",
+		megaEvolves: "Slowking",
+		itemUser: ["Slowking"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 760,
+		gen: 6,
+		isNonstandard: "Past",
+		desc: "If held by a Slowking, this item allows it to Mega Evolve in battle.",
 	},
 	smoothrock: {
 		name: "Smooth Rock",

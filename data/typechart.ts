@@ -270,7 +270,7 @@ export const BattleTypeChart: {[k: string]: TypeData} = {
 		damageTaken: {
 			hail: 3,
 			frz: 3,
-			Bug: 0,
+			Bug: 2,
 			Dark: 0,
 			Dragon: 0,
 			Electric: 0,
@@ -287,7 +287,7 @@ export const BattleTypeChart: {[k: string]: TypeData} = {
 			Psychic: 0,
 			Rock: 1,
 			Steel: 1,
-			Water: 0,
+			Water: 2,
 		},
 		HPivs: {atk: 30, def: 30},
 		HPdvs: {def: 13},
