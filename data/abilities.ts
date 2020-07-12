@@ -112,6 +112,12 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify([0x14CD, 0x1000]);
 			}
 		},
+		onBoost(boost, target, source, effect) {
+			if (effect.id === 'focusbreak') {
+				delete boost.spa;
+				this.add('-immune', target, '[from] ability: Oblivious');
+			}
+		},
 		name: "Analytic",
 		rating: 2.5,
 		num: 148,
@@ -510,7 +516,7 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 		onModifyMove(move) {
 			if (!move.ignoreImmunity) move.ignoreImmunity = {};
 			if (move.ignoreImmunity !== true) {
-				move.ignoreImmunity['Steel'] = true;
+				move.ignoreImmunity['Poison'] = true;
 			}
 		},
 		name: "Corrosion",
@@ -1712,6 +1718,10 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 			if (effect.id === 'intimidate') {
 				delete boost.atk;
 				this.add('-immune', target, '[from] ability: Inner Focus');
+			},
+			if (effect.id === 'focusbreak') {
+				delete boost.spa;
+				this.add('-immune', target, '[from] ability: Inner Focus');
 			}
 		},
 		name: "Inner Focus",
@@ -1758,6 +1768,28 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 		name: "Intimidate",
 		rating: 3.5,
 		num: 22,
+	},
+	focusbreak: {
+		desc: "On switch-in, this Pokemon lowers the Attack of adjacent opposing Pokemon by 1 stage. Inner Focus, Oblivious, Anylitic, Steadfast, and Pokemon behind a substitute are immune.",
+		shortDesc: "On switch-in, this Pokemon lowers the Special Attack of adjacent opponents by 1 stage.",
+		onStart(pokemon) {
+			let activated = false;
+			for (const target of pokemon.side.foe.active) {
+				if (!target || !this.isAdjacent(target, pokemon)) continue;
+				if (!activated) {
+					this.add('-ability', pokemon, 'Focus Break', 'boost');
+					activated = true;
+				}
+				if (target.volatiles['substitute']) {
+					this.add('-immune', target);
+				} else {
+					this.boost({spa: -1}, target, pokemon, null, true);
+				}
+			}
+		},
+		name: "Focus Break",
+		rating: 3.5,
+		num: -2,
 	},
 	intrepidsword: {
 		shortDesc: "On switch-in, this Pokemon's Attack is raised by 1 stage.",
@@ -2503,6 +2535,10 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 		onBoost(boost, target, source, effect) {
 			if (effect.id === 'intimidate') {
 				delete boost.atk;
+				this.add('-immune', target, '[from] ability: Oblivious');
+			},
+			if (effect.id === 'focusbreak') {
+				delete boost.spa;
 				this.add('-immune', target, '[from] ability: Oblivious');
 			}
 		},
@@ -3814,6 +3850,12 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 		shortDesc: "If this Pokemon flinches, its Speed is raised by 1 stage.",
 		onFlinch(pokemon) {
 			this.boost({spe: 1});
+		},
+		onBoost(boost, target, source, effect) {
+			if (effect.id === 'focusbreak') {
+				delete boost.spa;
+				this.add('-immune', target, '[from] ability: Oblivious');
+			}
 		},
 		name: "Steadfast",
 		rating: 1,

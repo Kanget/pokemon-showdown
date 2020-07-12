@@ -25170,7 +25170,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			willowisp: ["7M", "6M", "5M", "4M"],
 			wonderroom: ["7T", "6T", "5T"],
 			focusblast: ["8M"],
-			Hypnosis: ["8M"],
+			hypnosis: ["8M"],
 		},
 	},
 	unown: {
@@ -70651,6 +70651,9 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			withdraw: ["7L1"],
 			wonderroom: ["7T"],
 			mistyexplosion: ["8T"],
+			shoreup: ["8M"],
+			teleport: ["8M"],
+			aromatherapy: ["8M"],
 		},
 		eventData: [
 			{generation: 7, level: 60, moves: ["naturesmadness", "muddywater", "aquaring", "hydropump"]},
@@ -73710,6 +73713,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			substitute: ["8M"],
 			wrap: ["8L1"],
 			zenheadbutt: ["8M"],
+			slackoff: ["8M"],
 		},
 	},
 	cramorant: {
