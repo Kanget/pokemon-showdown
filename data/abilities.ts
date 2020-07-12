@@ -1843,7 +1843,7 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 				move.accuracy *= 0.8;
 			}
 		},
-		name: "Way of the Fist",
+		name: "Kicker",
 		rating: 3,
 		num: -5,
 	},
