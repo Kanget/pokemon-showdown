@@ -1712,7 +1712,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 	},
 	eviofight: {
 		name: "Eviofight",
-		spritenum: 130,
+		spritenum: 716,
 		fling: {
 			basePower: 40,
 		},
