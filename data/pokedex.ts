@@ -6687,7 +6687,7 @@ export const BattlePokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Dragon", "Psychic"],
 		gender: "M",
 		baseStats: {hp: 80, atk: 130, def: 100, spa: 160, spd: 120, spe: 110},
-		abilities: {0: "Focus Break},
+		abilities: {0: "Focus Break"},
 		heightm: 2.3,
 		weightkg: 70,
 		color: "Purple",
