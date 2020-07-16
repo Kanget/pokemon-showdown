@@ -2578,6 +2578,29 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 		rating: 1.5,
 		num: 12,
 	},
+	flowercrown: {
+		shortDesc: "This Pokemon is immune to powder moves and damage from Sandstorm or Hail.",
+		onUpdate(pokemon) {
+			pokemon.cureStatus();
+			pokemon.removeVolatile('confusion');
+			const conditions = ['attract', 'taunt', 'encore', 'torment', 'disable', 'healblock'];
+			for (const firstCondition of conditions) {
+				if (pokemon.volatiles[firstCondition]) {
+					if (!pokemon.useItem()) return;
+					for (const secondCondition of conditions) {
+						pokemon.removeVolatile(secondCondition);
+						if (firstCondition === 'attract' && secondCondition === 'attract') {
+							this.add('-end', pokemon, 'move: Attract', '[from] ability: Flower Crown');
+						}
+					}
+					return;
+				}
+			}
+		},
+		name: "Flower Crown",
+		rating: 2,
+		num: -10,
+	},
 	overcoat: {
 		shortDesc: "This Pokemon is immune to powder moves and damage from Sandstorm or Hail.",
 		onImmunity(type, pokemon) {
@@ -3887,7 +3910,7 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 		onBoost(boost, target, source, effect) {
 			if (effect.id === 'focusbreak') {
 				delete boost.spa;
-				this.add('-immune', target, '[from] ability: Oblivious');
+				this.add('-immune', target, '[from] ability: Steadfast');
 			}
 		},
 		name: "Steadfast",

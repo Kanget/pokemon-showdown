@@ -227,6 +227,21 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		isNonstandard: "Past",
 		desc: "If held by an Ampharos, this item allows it to Mega Evolve in battle.",
 	},
+	milotite: {
+		name: "Milotite",
+		spritenum: 580,
+		megaStone: "Milotic-Mega",
+		megaEvolves: "Milotic",
+		itemUser: ["Milotic"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -11,
+		gen: 6,
+		isNonstandard: "Past",
+		desc: "If held by an Ampharos, this item allows it to Mega Evolve in battle.",
+	},
 	apicotberry: {
 		name: "Apicot Berry",
 		spritenum: 10,
