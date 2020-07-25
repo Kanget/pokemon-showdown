@@ -1262,7 +1262,7 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 		onDamagingHit(damage, target, source, move) {
 			if (move.flags['contact']) {
 				this.add('-ability', target, 'Gooey');
-				this.boost({spe: -1}, source, target, null, true);
+				this.boost({spe: -2}, source, target, null, true);
 			}
 		},
 		name: "Gooey",
@@ -1452,7 +1452,17 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 		num: 134,
 	},
 	honeygather: {
-		shortDesc: "No competitive use.",
+		shortDesc: "This Pokemon Recovers 1/16 max hp every turn.",
+		onResidualOrder: 5,
+		onResidualSubOrder: 5,
+		onResidual(pokemon) {
+			if (this.field.isTerrain('grassyterrain')) return;
+			this.heal(pokemon.baseMaxhp / 16);
+		},
+		onTerrain(pokemon) {
+			if (!this.field.isTerrain('grassyterrain')) return;
+			this.heal(pokemon.baseMaxhp / 16);
+		},
 		name: "Honey Gather",
 		rating: 0,
 		num: 118,
@@ -1606,7 +1616,13 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 		num: 246,
 	},
 	illuminate: {
-		shortDesc: "No competitive use.",
+		shortDesc: "All moves have 0.9 accuracy when targeting this pokemon.",
+		onModifyAccuracy(accuracy) {
+			if (typeof accuracy == 'number') {
+				this.debug('Sand Veil - decreasing accuracy');
+				return accuracy * 0.9;
+			}
+		},
 		name: "Illuminate",
 		rating: 0,
 		num: 35,
@@ -2005,6 +2021,10 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 			if (move.flags['sound'] && !pokemon.volatiles.dynamax) { // hardcode
 				move.type = 'Water';
 			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.flags['sound']) return this.chainModify([0x1333, 0x1000]);
 		},
 		name: "Liquid Voice",
 		rating: 1.5,
@@ -2669,7 +2689,7 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 		shortDesc: "This Pokemon's damaging moves hit twice. The second hit has its damage quartered.",
 		onPrepareHit(source, target, move) {
 			if (move.category === 'Status' || move.selfdestruct || move.multihit) return;
-			if (['iceball', 'rollout','seismictoss','nightshade','dragonrage'].includes(move.id)) return;
+			if (['iceball', 'rollout','seismictoss','nightshade','dragonrage','sonicboom'].includes(move.id)) return;
 			if (!move.flags['charge'] && !move.spreadHit && !move.isZ && !move.isMax) {
 				move.multihit = 2;
 				move.multihitType = 'parentalbond';
@@ -3296,7 +3316,12 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 		num: 24,
 	},
 	runaway: {
-		shortDesc: "No competitive use.",
+		desc: "The Pokemon is immune to any form of trapping, be it from move or ability."
+		shortDesc: "The User is not able to be trapped by any ability or move",
+		onTrapPokemonPriority: -10,
+		onTrapPokemon(pokemon) {
+			pokemon.trapped = pokemon.maybeTrapped = false;
+		},
 		name: "Run Away",
 		rating: 0,
 		num: 50,

@@ -316,8 +316,8 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		gen: 6,
 		desc: "Holder's Sp. Def is 1.5x, but it can only select damaging moves.",
 	},
-	battlearmor: {
-		name: "Battle Armor",
+	riotgear: {
+		name: "Riot Gear",
 		spritenum: 581,
 		fling: {
 			basePower: 80,

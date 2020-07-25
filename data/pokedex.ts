@@ -13173,7 +13173,7 @@ export const BattlePokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Grass"],
 		gender: "F",
 		baseStats: {hp: 72, atk: 120, def: 98, spa: 50, spd: 98, spe: 72},
-		abilities: {0: "Leaf Guard", 1: "Queenly Majesty", H: "Sweet Veil"},
+		abilities: {0: "Kicker", 1: "Queenly Majesty", H: "Sweet Veil"},
 		heightm: 1.2,
 		weightkg: 21.4,
 		color: "Purple",
@@ -14337,7 +14337,7 @@ export const BattlePokedex: {[speciesid: string]: SpeciesData} = {
 	drizzile: {
 		num: 817,
 		name: "Drizzile",
-		types: ["Water", "Ghost"],
+		types: ["Water"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 65, atk: 60, def: 55, spa: 95, spd: 55, spe: 90},
 		abilities: {0: "Torrent", H: "Infiltraitor"},
@@ -14352,7 +14352,7 @@ export const BattlePokedex: {[speciesid: string]: SpeciesData} = {
 	inteleon: {
 		num: 818,
 		name: "Inteleon",
-		types: ["Water", "Ghost"],
+		types: ["Water"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 70, atk: 85, def: 65, spa: 125, spd: 65, spe: 120},
 		abilities: {0: "Torrent", H: "Infiltraitor"},

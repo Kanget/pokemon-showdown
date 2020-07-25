@@ -16898,6 +16898,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			uproar: ["8M"],
 			wonderroom: ["8M"],
 			zenheadbutt: ["8M"],
+			teatime: ["8M"],
 		},
 	},
 	scyther: {
@@ -48263,6 +48264,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			willowisp: ["7M", "6M", "5M"],
 			workup: ["7M", "5M"],
 			zenheadbutt: ["7T", "6T"],
+			bodypress: ["8M"],
 		},
 	},
 	emboar: {
@@ -65457,6 +65459,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			toxic: ["7M"],
 			workup: ["8M", "7M"],
 			worryseed: ["7T"],
+			brambleshot: ["8M"],
 		},
 	},
 	decidueye: {

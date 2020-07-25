@@ -7494,7 +7494,7 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		name: "Grass Knot",
 		pp: 20,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, nonsky: 1},
+		flags: {protect: 1, mirror: 1, nonsky: 1},
 		onTryHit(target, source, move) {
 			if (target.volatiles['dynamax']) {
 				this.add('-fail', source, 'move: Grass Knot', '[from] Dynamax');
@@ -9852,23 +9852,28 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 	},
 	kinesis: {
 		num: 134,
-		accuracy: 80,
-		basePower: 0,
-		category: "Status",
-		desc: "Lowers the target's accuracy by 1 stage.",
-		shortDesc: "Lowers the target's accuracy by 1.",
+		accuracy: 90,
+		basePower: 110,
+		category: "Special",
+		shortDesc: "Fails if the target has no held item.",
 		name: "Kinesis",
-		pp: 15,
+		pp: 5,
 		priority: 0,
-		flags: {protect: 1, reflectable: 1, mirror: 1},
-		boosts: {
-			accuracy: -1,
+		flags: {protect: 1, mirror: 1},
+		onTry(pokemon, target) {
+			if (!target.item) {
+				this.attrLastMove('[still]');
+				this.add('-fail', pokemon);
+				return null;
+			}
+		},
+		onTryHit(target, source, move) {
+			this.add('-activate', target, 'move: Poltergeist', this.dex.getItem(target.item).name);
 		},
 		secondary: null,
 		target: "normal",
 		type: "Psychic",
-		zMove: {boost: {evasion: 1}},
-		contestType: "Clever",
+	},
 	},
 	kingsshield: {
 		num: 588,
@@ -18964,6 +18969,25 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Normal",
+		zMove: {basePower: 140},
+		maxMove: {basePower: 130},
+		contestType: "Cute",
+	},
+	brambleshot: {
+		num: 541,
+		accuracy: 85,
+		basePower: 25,
+		category: "Physical",
+		desc: "Hits two to five times. Has a 1/3 chance to hit two or three times, and a 1/6 chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
+		shortDesc: "Hits 2-5 times in one turn.",
+		name: "Bramle Shot",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: [2, 5],
+		secondary: null,
+		target: "normal",
+		type: "Grass",
 		zMove: {basePower: 140},
 		maxMove: {basePower: 130},
 		contestType: "Cute",
