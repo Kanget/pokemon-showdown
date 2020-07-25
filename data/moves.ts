@@ -9874,7 +9874,6 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Psychic",
 	},
-	},
 	kingsshield: {
 		num: 588,
 		accuracy: true,
