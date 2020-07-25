@@ -438,13 +438,13 @@ export const Formats: (FormatsData | {section: string, column?: number})[] = [
 
 		mod: 'gen8',
 		searchShow: false,
-		ruleset: ['[Gen 8] National Dex'],
+		ruleset: ['[Gen 8] National Dex OU'],
 		banlist: [
 			// National Dex OU
 			'Blacephalon', 'Chansey', 'Charizard-Mega-Y', 'Cinderace', 'Clefable', 'Corviknight', 'Dracovish', 'Dragapult', 'Excadrill', 'Ferrothorn', 'Garchomp',
 			'Garchomp-Mega', 'Gliscor', 'Greninja', 'Heatran', 'Kartana', 'Kommo-o', 'Landorus-Therian', 'Lopunny-Mega', 'Magearna', 'Magearna-Original', 'Magnezone',
 			'Melmetal', 'Pelipper', 'Rillaboom', 'Scizor-Mega', 'Serperior', 'Slowbro-Base', 'Slowbro-Mega', 'Swampert-Mega', 'Tangrowth', 'Tapu Fini', 'Tapu Koko',
-			'Tapu Lele', 'Toxapex', 'Volcanion', 'Volcarona', 'Zapdos',
+			'Tapu Lele', 'Toxapex', 'Volcanion', 'Volcarona', 'Zapdos','Butterfree-Mega', 'Bisharp-Mega', 'Flygon-Mega', 'Meganium',
 			'nduubl', // National Dex UUBL
 			'Aegislash', 'Alakazam', 'Azumarill', 'Charizard-Mega-X', 'Deoxys-Defense', 'Dragonite', 'Gallade-Mega', 'Grimmsnarl', 'Hawlucha', 'Heracross-Mega',
 			'Hoopa-Unbound', 'Hydreigon', 'Latias-Mega', 'Latios', 'Latios-Mega', 'Manaphy', 'Mawile-Mega', 'Medicham-Mega', 'Mew', 'Pinsir-Mega', 'Scolipede',
