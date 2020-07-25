@@ -1814,8 +1814,8 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 		num: 160,
 	},
 	ironfist: {
-		desc: "This Pokemon's punch-based attacks have their power multiplied by 1.2.",
-		shortDesc: "This Pokemon's punch-based attacks have 1.2x power. Sucker Punch is not boosted.",
+		desc: "This Pokemon's punch-based attacks have their power multiplied by 1.5.",
+		shortDesc: "This Pokemon's punch-based attacks have 1.5x power. Sucker Punch is not boosted.",
 		onBasePowerPriority: 23,
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['punch']) {
@@ -2579,14 +2579,13 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 		num: 12,
 	},
 	flowercrown: {
-		shortDesc: "This Pokemon is immune to powder moves and damage from Sandstorm or Hail.",
+		shortDesc: "This pokemon cannot be statued, taunted, attracted, disabled, encored, or tormented",
 		onUpdate(pokemon) {
 			pokemon.cureStatus();
 			pokemon.removeVolatile('confusion');
 			const conditions = ['attract', 'taunt', 'encore', 'torment', 'disable', 'healblock'];
 			for (const firstCondition of conditions) {
 				if (pokemon.volatiles[firstCondition]) {
-					if (!pokemon.useItem()) return;
 					for (const secondCondition of conditions) {
 						pokemon.removeVolatile(secondCondition);
 						if (firstCondition === 'attract' && secondCondition === 'attract') {
@@ -2670,8 +2669,7 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 		shortDesc: "This Pokemon's damaging moves hit twice. The second hit has its damage quartered.",
 		onPrepareHit(source, target, move) {
 			if (move.category === 'Status' || move.selfdestruct || move.multihit) return;
-			if (move.name == 'seismictoss' || 'nightshade') return;
-			if (['iceball', 'rollout'].includes(move.id)) return;
+			if (['iceball', 'rollout','seismictoss','nightshade','dragonrage'].includes(move.id)) return;
 			if (!move.flags['charge'] && !move.spreadHit && !move.isZ && !move.isMax) {
 				move.multihit = 2;
 				move.multihitType = 'parentalbond';
