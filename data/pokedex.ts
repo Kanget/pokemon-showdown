@@ -295,7 +295,7 @@ export const BattlePokedex: {[speciesid: string]: SpeciesData} = {
 		baseSpecies: "Butterfree",
 		forme: "Mega",
 		types: ["Bug", "Fairy"],
-		baseStats: {hp: 65, atk: 15, def: 40, spa: 155, spd: 100, spe: 125},
+		baseStats: {hp: 60, atk: 15, def: 40, spa: 155, spd: 100, spe: 125},
 		abilities: {0: "Dazzling"},
 		heightm: 1.4,
 		weightkg: 40.5,

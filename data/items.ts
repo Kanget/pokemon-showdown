@@ -659,7 +659,6 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		},
 		num: 558,
 		gen: 5,
-		
 		desc: "Holder's first successful Bug-type attack will have 1.3x power. Single use.",
 	},
 	bugmemory: {
@@ -1181,6 +1180,9 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (move.type === 'Dark' && source.useItem()) {
 				source.addVolatile('gem');
 			}
+			if (source.hasType('Dark')) return false;
+			if (!source.addType('Dark')) return false;
+			this.add('-start', source, 'typeadd', 'Dark', '[from] item: Dark Gem');
 		},
 		num: 562,
 		gen: 5,
@@ -1389,6 +1391,9 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (move.type === 'Dragon' && source.useItem()) {
 				source.addVolatile('gem');
 			}
+			if (source.hasType('Dragon')) return false;
+			if (!source.addType('Dragon')) return false;
+			this.add('-start', source, 'typeadd', 'Dragon', '[from] item: Dragon Gem');
 		},
 		num: 561,
 		gen: 5,
@@ -1613,6 +1618,9 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (move.type === 'Electric' && source.useItem()) {
 				source.addVolatile('gem');
 			}
+			if (source.hasType('Electric')) return false;
+			if (!source.addType('Electric')) return false;
+			this.add('-start', source, 'typeadd', 'Electric', '[from] item: Electric Gem');
 		},
 		num: 550,
 		gen: 5,
@@ -1787,6 +1795,9 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (move.type === 'Fairy' && source.useItem()) {
 				source.addVolatile('gem');
 			}
+			if (source.hasType('Fairy')) return false;
+			if (!source.addType('Fairy')) return false;
+			this.add('-start', source, 'typeadd', 'Fairy', '[from] item: Fairy Gem');
 		},
 		num: 715,
 		gen: 6,
@@ -1826,6 +1837,9 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (move.type === 'Fighting' && source.useItem()) {
 				source.addVolatile('gem');
 			}
+			if (source.hasType('Fighting')) return false;
+			if (!source.addType('Fighting')) return false;
+			this.add('-start', source, 'typeadd', 'Fighting', '[from] item: Fighting Gem');
 		},
 		num: 553,
 		gen: 5,
@@ -1897,6 +1911,9 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (move.type === 'Fire' && source.useItem()) {
 				source.addVolatile('gem');
 			}
+			if (source.hasType('Fire')) return false;
+			if (!source.addType('Fire')) return false;
+			this.add('-start', source, 'typeadd', 'Fire', '[from] item: Fire Gem');
 		},
 		num: 548,
 		gen: 5,
@@ -2035,6 +2052,9 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (move.type === 'Flying' && source.useItem()) {
 				source.addVolatile('gem');
 			}
+			if (source.hasType('Flying')) return false;
+			if (!source.addType('Flying')) return false;
+			this.add('-start', source, 'typeadd', 'Flying', '[from] item: Flying Gem');
 		},
 		num: 556,
 		gen: 5,
@@ -2296,6 +2316,9 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (move.type === 'Ghost' && source.useItem()) {
 				source.addVolatile('gem');
 			}
+			if (source.hasType('Ghost')) return false;
+			if (!source.addType('Ghost')) return false;
+			this.add('-start', source, 'typeadd', 'Ghost', '[from] item: Ghost Gem');
 		},
 		num: 560,
 		gen: 5,
@@ -2366,6 +2389,9 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (move.type === 'Grass' && source.useItem()) {
 				source.addVolatile('gem');
 			}
+			if (source.hasType('Grass')) return false;
+			if (!source.addType('Grass')) return false;
+			this.add('-start', source, 'typeadd', 'Grass', '[from] item: Grass Gem');
 		},
 		num: 551,
 		gen: 5,
@@ -2491,6 +2517,9 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (move.type === 'Ground' && source.useItem()) {
 				source.addVolatile('gem');
 			}
+			if (source.hasType('Ground')) return false;
+			if (!source.addType('Ground')) return false;
+			this.add('-start', source, 'typeadd', 'Ground', '[from] item: Ground Gem');
 		},
 		num: 555,
 		gen: 5,
@@ -2708,6 +2737,9 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (move.type === 'Ice' && source.useItem()) {
 				source.addVolatile('gem');
 			}
+			if (source.hasType('Ice')) return false;
+			if (!source.addType('Ice')) return false;
+			this.add('-start', source, 'typeadd', 'Ice', '[from] item: Ice Gem');
 		},
 		num: 552,
 		gen: 5,
@@ -4016,6 +4048,9 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (move.type === 'Normal' && source.useItem()) {
 				source.addVolatile('gem');
 			}
+			if (source.hasType('Normal')) return false;
+			if (!source.addType('Normal')) return false;
+			this.add('-start', source, 'typeadd', 'Normal', '[from] item: Normal Gem');
 		},
 		num: 564,
 		gen: 5,
@@ -4376,6 +4411,9 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (move.type === 'Poison' && source.useItem()) {
 				source.addVolatile('gem');
 			}
+			if (source.hasType('Poison')) return false;
+			if (!source.addType('Poison')) return false;
+			this.add('-start', source, 'typeadd', 'Poison', '[from] item: Poison Gem');
 		},
 		num: 554,
 		gen: 5,
@@ -4635,6 +4673,9 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (move.type === 'Psychic' && source.useItem()) {
 				source.addVolatile('gem');
 			}
+			if (source.hasType('Psychic')) return false;
+			if (!source.addType('Psychic')) return false;
+			this.add('-start', source, 'typeadd', 'Psychic', '[from] item: Psychic Gem');
 		},
 		num: 557,
 		gen: 5,
@@ -4965,6 +5006,9 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (move.type === 'Rock' && source.useItem()) {
 				source.addVolatile('gem');
 			}
+			if (source.hasType('Rock')) return false;
+			if (!source.addType('Rock')) return false;
+			this.add('-start', source, 'typeadd', 'Rock', '[from] item: Rock Gem');
 		},
 		num: 559,
 		gen: 5,
@@ -5779,6 +5823,9 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (move.type === 'Steel' && source.useItem()) {
 				source.addVolatile('gem');
 			}
+			if (source.hasType('Steel')) return false;
+			if (!source.addType('Steel')) return false;
+			this.add('-start', source, 'typeadd', 'Steel', '[from] item: Steel Gem');
 		},
 		num: 563,
 		gen: 5,
@@ -7206,6 +7253,9 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (move.type === 'Water' && source.useItem()) {
 				source.addVolatile('gem');
 			}
+			if (source.hasType('Water')) return false;
+			if (!source.addType('Water')) return false;
+			this.add('-start', source, 'typeadd', 'Water', '[from] item: Water Gem');
 		},
 		num: 549,
 		gen: 5,
