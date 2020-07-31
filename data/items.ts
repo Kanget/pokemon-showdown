@@ -655,8 +655,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			}
 			if (target.hasType('Grass')) return false;
 			if (!target.addType('Grass')) return false;
-			this.add('-start', user, 'typeadd', 'Grass', '[from] move: Forest\'s Curse');
-			}
+			this.add('-start', target, 'typeadd', 'Grass', '[from] move: Forest\'s Curse');
 		},
 		num: 558,
 		gen: 5,
