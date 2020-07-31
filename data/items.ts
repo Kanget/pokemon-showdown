@@ -653,9 +653,9 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (move.type === 'Bug' && source.useItem()) {
 				source.addVolatile('gem');
 			}
-			if (target.hasType('Grass')) return false;
-			if (!target.addType('Grass')) return false;
-			this.add('-start', target, 'typeadd', 'Grass', '[from] move: Forest\'s Curse');
+			if (source.hasType('Bug')) return false;
+			if (!source.addType('Bug')) return false;
+			this.add('-start', source, 'typeadd', 'Bug', '[from] item: Bug Gem');
 		},
 		num: 558,
 		gen: 5,
