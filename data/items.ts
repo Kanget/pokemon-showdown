@@ -7249,7 +7249,8 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
 			const pledges = ['firepledge', 'grasspledge', 'waterpledge'];
-			if (target === source || move.category === 'Status' || pledges.includes(move.id) || move.flags['gemeffect']) return;
+			if (target === source || move.category === 'Status' || pledges.includes(move.id)) return;
+			if (move.flags['gemeffect']) return;
 			if (move.type === 'Water' && source.useItem()) {
 				source.addVolatile('gem');
 			}
@@ -7259,7 +7260,6 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		},
 		num: 549,
 		gen: 5,
-		
 		desc: "Holder's first successful Water-type attack will have 1.3x power. Single use.",
 	},
 	watermemory: {
