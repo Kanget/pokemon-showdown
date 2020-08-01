@@ -7252,10 +7252,9 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (target === source || move.category === 'Status' || moveid.includes(move.id)) return;
 			if (move.type === 'Water' && source.useItem()) {
 				source.addVolatile('gem');
+				if (source.hasType('Water') || !source.addType('Water')) return false;
+				this.add('-start', source, 'typeadd', 'Water', '[from] item: Water Gem');
 			}
-			if (source.hasType('Water')) return false;
-			if (!source.addType('Water')) return false;
-			this.add('-start', source, 'typeadd', 'Water', '[from] item: Water Gem');
 		},
 		num: 549,
 		gen: 5,
