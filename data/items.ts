@@ -652,14 +652,13 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (target === source || move.category === 'Status' || move.flags['gemeffect']) return;
 			if (move.type === 'Bug' && source.useItem()) {
 				source.addVolatile('gem');
+				if (source.hasType('Bug') || !source.addType('Bug')) return;
+				this.add('-start', source, 'typeadd', 'Bug', '[from] item: Bug Gem');
 			}
-			if (source.hasType('Bug')) return false;
-			if (!source.addType('Bug')) return false;
-			this.add('-start', source, 'typeadd', 'Bug', '[from] item: Bug Gem');
 		},
 		num: 558,
 		gen: 5,
-		desc: "Holder's first successful Bug-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Bug-type attack will have 1.3x power and, if not already, will add the Bug-type to the Holder. Single use. Hidden Power is not effected.",
 	},
 	bugmemory: {
 		name: "Bug Memory",
@@ -1179,15 +1178,13 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (target === source || move.category === 'Status' || move.name == move.flags['gemeffect']) return;
 			if (move.type === 'Dark' && source.useItem()) {
 				source.addVolatile('gem');
+				if (source.hasType('Dark') || !source.addType('Dark')) return;
+				this.add('-start', source, 'typeadd', 'Dark', '[from] item: Dark Gem');
 			}
-			if (source.hasType('Dark')) return false;
-			if (!source.addType('Dark')) return false;
-			this.add('-start', source, 'typeadd', 'Dark', '[from] item: Dark Gem');
 		},
 		num: 562,
-		gen: 5,
-		
-		desc: "Holder's first successful Dark-type attack will have 1.3x power. Single use.",
+		gen: 5,	
+		desc: "Holder's first successful Dark-type attack will have 1.3x power and, if not already, will add the Dark-type to the Holder. Single use. Hidden Power is not effected.",
 	},
 	darkmemory: {
 		name: "Dark Memory",
@@ -1390,15 +1387,13 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (target === source || move.category === 'Status' || move.flags['gemeffect']) return;
 			if (move.type === 'Dragon' && source.useItem()) {
 				source.addVolatile('gem');
+				if (source.hasType('Dragon') || !source.addType('Dragon')) return false;
+				this.add('-start', source, 'typeadd', 'Dragon', '[from] item: Dragon Gem');
 			}
-			if (source.hasType('Dragon')) return false;
-			if (!source.addType('Dragon')) return false;
-			this.add('-start', source, 'typeadd', 'Dragon', '[from] item: Dragon Gem');
 		},
 		num: 561,
 		gen: 5,
-		
-		desc: "Holder's first successful Dragon-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Dragon-type attack will have 1.3x power and, if not already, will add the Dragon-type to the Holder. Single use. Hidden power is not effected.",
 	},
 	dragonmemory: {
 		name: "Dragon Memory",
@@ -1617,15 +1612,14 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (target === source || move.category === 'Status' || pledges.includes(move.id) || move.flags['gemeffect']) return;
 			if (move.type === 'Electric' && source.useItem()) {
 				source.addVolatile('gem');
+				if (source.hasType('Electric') || !source.addType('Electric')) return;
+				this.add('-start', source, 'typeadd', 'Electric', '[from] item: Electric Gem');
 			}
-			if (source.hasType('Electric')) return false;
-			if (!source.addType('Electric')) return false;
-			this.add('-start', source, 'typeadd', 'Electric', '[from] item: Electric Gem');
 		},
 		num: 550,
 		gen: 5,
 		
-		desc: "Holder's first successful Electric-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Electric-type attack will have 1.3x power and, if not already, will add the Electric-type to the Holder. Single use. Hidden Power is not effected.",
 	},
 	electricmemory: {
 		name: "Electric Memory",
@@ -1794,15 +1788,13 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (target === source || move.category === 'Status' || move.flags['gemeffect']) return;
 			if (move.type === 'Fairy' && source.useItem()) {
 				source.addVolatile('gem');
+				if (source.hasType('Fairy') || !source.addType('Fairy')) return;
+				this.add('-start', source, 'typeadd', 'Fairy', '[from] item: Fairy Gem');
 			}
-			if (source.hasType('Fairy')) return false;
-			if (!source.addType('Fairy')) return false;
-			this.add('-start', source, 'typeadd', 'Fairy', '[from] item: Fairy Gem');
 		},
 		num: 715,
 		gen: 6,
-		
-		desc: "Holder's first successful Fairy-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Fairy-type attack will have 1.3x power and, if not already, will add the Fairy-type to the Holder. Single use. Hidden Power is not effected.",
 	},
 	fairymemory: {
 		name: "Fairy Memory",
@@ -1836,15 +1828,13 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (target === source || move.category === 'Status' || move.flags['gemeffect']) return;
 			if (move.type === 'Fighting' && source.useItem()) {
 				source.addVolatile('gem');
+				if (source.hasType('Fighting') || !source.addType('Fighting')) return;
+				this.add('-start', source, 'typeadd', 'Fighting', '[from] item: Fighting Gem');
 			}
-			if (source.hasType('Fighting')) return false;
-			if (!source.addType('Fighting')) return false;
-			this.add('-start', source, 'typeadd', 'Fighting', '[from] item: Fighting Gem');
 		},
 		num: 553,
 		gen: 5,
-		
-		desc: "Holder's first successful Fighting-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Fighting-type attack will have 1.3x power and, if not already, will add the Fighting-type to the Holder. Single use. Hidden Power is not effected.",
 	},
 	fightingmemory: {
 		name: "Fighting Memory",
@@ -1910,15 +1900,13 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (target === source || move.category === 'Status' || pledges.includes(move.id) || move.flags['gemeffect']) return;
 			if (move.type === 'Fire' && source.useItem()) {
 				source.addVolatile('gem');
+				if (source.hasType('Fire') || !source.addType('Fire')) return;
+				this.add('-start', source, 'typeadd', 'Fire', '[from] item: Fire Gem');
 			}
-			if (source.hasType('Fire')) return false;
-			if (!source.addType('Fire')) return false;
-			this.add('-start', source, 'typeadd', 'Fire', '[from] item: Fire Gem');
 		},
 		num: 548,
 		gen: 5,
-		
-		desc: "Holder's first successful Fire-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Fire-type attack will have 1.3x power and, if not already, will add the Fire-type to the Holder. Single use. Hidden Power is not effected.",
 	},
 	firememory: {
 		name: "Fire Memory",
@@ -2051,15 +2039,13 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (target === source || move.category === 'Status' || move.flags['gemeffect']) return;
 			if (move.type === 'Flying' && source.useItem()) {
 				source.addVolatile('gem');
+				if (source.hasType('Flying') || !source.addType('Flying') return;
+				this.add('-start', source, 'typeadd', 'Flying', '[from] item: Flying Gem');
 			}
-			if (source.hasType('Flying')) return false;
-			if (!source.addType('Flying')) return false;
-			this.add('-start', source, 'typeadd', 'Flying', '[from] item: Flying Gem');
 		},
 		num: 556,
 		gen: 5,
-		
-		desc: "Holder's first successful Flying-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Flying-type attack will have 1.3x power and, if not already, will add the Flying-type to the Holder. Single use. Hidden Power is not effected.",
 	},
 	flyingmemory: {
 		name: "Flying Memory",
@@ -2315,15 +2301,13 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (target === source || move.category === 'Status' || move.flags['gemeffect']) return;
 			if (move.type === 'Ghost' && source.useItem()) {
 				source.addVolatile('gem');
+				if (source.hasType('Ghost') || !source.addType('Ghost')) return;
+				this.add('-start', source, 'typeadd', 'Ghost', '[from] item: Ghost Gem');
 			}
-			if (source.hasType('Ghost')) return false;
-			if (!source.addType('Ghost')) return false;
-			this.add('-start', source, 'typeadd', 'Ghost', '[from] item: Ghost Gem');
 		},
 		num: 560,
 		gen: 5,
-		
-		desc: "Holder's first successful Ghost-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Ghost-type attack will have 1.3x power and, if not already, will add the Ghost-type to the Holder. Single use. Hidden Power is not effected.",
 	},
 	ghostmemory: {
 		name: "Ghost Memory",
@@ -2388,15 +2372,13 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (target === source || move.category === 'Status' || pledges.includes(move.id) || move.flags['gemeffect']) return;
 			if (move.type === 'Grass' && source.useItem()) {
 				source.addVolatile('gem');
+				if (source.hasType('Grass') || !source.addType('Grass')) return;
+				this.add('-start', source, 'typeadd', 'Grass', '[from] item: Grass Gem');
 			}
-			if (source.hasType('Grass')) return false;
-			if (!source.addType('Grass')) return false;
-			this.add('-start', source, 'typeadd', 'Grass', '[from] item: Grass Gem');
 		},
 		num: 551,
 		gen: 5,
-		
-		desc: "Holder's first successful Grass-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Grass-type attack will have 1.3x power and, if not already, will add the Water-type to the Holder. Single use. Hidden Power is not effected.",
 	},
 	grassmemory: {
 		name: "Grass Memory",
@@ -2516,15 +2498,13 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (target === source || move.category === 'Status' || move.flags['gemeffect']) return;
 			if (move.type === 'Ground' && source.useItem()) {
 				source.addVolatile('gem');
+				if (source.hasType('Ground') || !source.addType('Ground')) return;
+				this.add('-start', source, 'typeadd', 'Ground', '[from] item: Ground Gem');
 			}
-			if (source.hasType('Ground')) return false;
-			if (!source.addType('Ground')) return false;
-			this.add('-start', source, 'typeadd', 'Ground', '[from] item: Ground Gem');
 		},
 		num: 555,
 		gen: 5,
-		
-		desc: "Holder's first successful Ground-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Ground-type attack will have 1.3x power and, if not already, will add the Ground-type to the Holder. Single use. Hidden Power is not effected.",
 	},
 	groundmemory: {
 		name: "Ground Memory",
@@ -2736,15 +2716,13 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (target === source || move.category === 'Status' || move.flags['gemeffect']) return;
 			if (move.type === 'Ice' && source.useItem()) {
 				source.addVolatile('gem');
+				if (source.hasType('Ice') || !source.addType('Ice')) return;
+				this.add('-start', source, 'typeadd', 'Ice', '[from] item: Ice Gem');
 			}
-			if (source.hasType('Ice')) return false;
-			if (!source.addType('Ice')) return false;
-			this.add('-start', source, 'typeadd', 'Ice', '[from] item: Ice Gem');
 		},
 		num: 552,
 		gen: 5,
-		
-		desc: "Holder's first successful Ice-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Ice-type attack will have 1.3x power and, if not already, will add the Ice-type to the Holder. Single use. Hidden Power is not effected.",
 	},
 	icememory: {
 		name: "Ice Memory",
@@ -4047,14 +4025,13 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (target === source || move.category === 'Status' || pledges.includes(move.id) || move.flags['gemeffect']) return;
 			if (move.type === 'Normal' && source.useItem()) {
 				source.addVolatile('gem');
+				if (source.hasType('Normal') || !source.addType('Normal')) return;
+				this.add('-start', source, 'typeadd', 'Normal', '[from] item: Normal Gem');
 			}
-			if (source.hasType('Normal')) return false;
-			if (!source.addType('Normal')) return false;
-			this.add('-start', source, 'typeadd', 'Normal', '[from] item: Normal Gem');
 		},
 		num: 564,
 		gen: 5,
-		desc: "Holder's first successful Normal-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Normal-type attack will have 1.3x power and, if not already, will add the Normal-type to the user. Single use. Hidden Power is not effected.",
 	},
 	normaliumz: {
 		name: "Normalium Z",
@@ -4410,15 +4387,13 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (target === source || move.category === 'Status' || move.flags['gemeffect']) return;
 			if (move.type === 'Poison' && source.useItem()) {
 				source.addVolatile('gem');
+				if (source.hasType('Poison') || !source.addType('Poison')) return;
+				this.add('-start', source, 'typeadd', 'Poison', '[from] item: Poison Gem');
 			}
-			if (source.hasType('Poison')) return false;
-			if (!source.addType('Poison')) return false;
-			this.add('-start', source, 'typeadd', 'Poison', '[from] item: Poison Gem');
 		},
 		num: 554,
 		gen: 5,
-		
-		desc: "Holder's first successful Poison-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Poison-type attack will have 1.3x power and, if not already, will add the Poison-type to the Holder. Single use. Hidden Power is not effected.",
 	},
 	poisonmemory: {
 		name: "Poison Memory",
@@ -4672,15 +4647,13 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (target === source || move.category === 'Status' || move.flags['gemeffect']) return;
 			if (move.type === 'Psychic' && source.useItem()) {
 				source.addVolatile('gem');
+				if (source.hasType('Psychic') || !source.addType('Psychic')) return;
+				this.add('-start', source, 'typeadd', 'Psychic', '[from] item: Psychic Gem');
 			}
-			if (source.hasType('Psychic')) return false;
-			if (!source.addType('Psychic')) return false;
-			this.add('-start', source, 'typeadd', 'Psychic', '[from] item: Psychic Gem');
 		},
 		num: 557,
 		gen: 5,
-		
-		desc: "Holder's first successful Psychic-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Psychic-type attack will have 1.3x power and, if not already, will add the Psychic-type to the Holder. Single use. Hidden Power is not effected.",
 	},
 	psychicmemory: {
 		name: "Psychic Memory",
@@ -5005,15 +4978,13 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (target === source || move.category === 'Status' || move.flags['gemeffect']) return;
 			if (move.type === 'Rock' && source.useItem()) {
 				source.addVolatile('gem');
+				if (source.hasType('Rock') || !source.addType('Rock')) return;
+				this.add('-start', source, 'typeadd', 'Rock', '[from] item: Rock Gem');
 			}
-			if (source.hasType('Rock')) return false;
-			if (!source.addType('Rock')) return false;
-			this.add('-start', source, 'typeadd', 'Rock', '[from] item: Rock Gem');
 		},
 		num: 559,
 		gen: 5,
-		
-		desc: "Holder's first successful Rock-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Rock-type attack will have 1.3x power and, if not already, will add the Rock-type to the Holder. Single use. Hidden Power is not effected.",
 	},
 	rockincense: {
 		name: "Rock Incense",
@@ -5828,8 +5799,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		},
 		num: 563,
 		gen: 5,
-		
-		desc: "Holder's first successful Steel-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Steel-type attack will have 1.3x power and, if not already, will add the Steel-type to the Holder. Single use. Hidden Power is not effected.",
 	},
 	steelmemory: {
 		name: "Steel Memory",
@@ -7247,17 +7217,17 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		spritenum: 528,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			const moveid = ['firepledge', 'grasspledge', 'waterpledge', 'hiddenpower'];
-			if (target === source || move.category === 'Status' || moveid.includes(move.id)) return;
+			const pledges = ['firepledge', 'grasspledge', 'waterpledge'];
+			if (target === source || move.category === 'Status' || pledges.includes(move.id) || move.flags['gemeffect']) return;
 			if (move.type === 'Water' && source.useItem()) {
 				source.addVolatile('gem');
-				if (source.hasType('Water') || !source.addType('Water')) return false;
+				if (source.hasType('Water') || !source.addType('Water')) return;
 				this.add('-start', source, 'typeadd', 'Water', '[from] item: Water Gem');
 			}
 		},
 		num: 549,
 		gen: 5,
-		desc: "Holder's first successful Water-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Water-type attack will have 1.3x power and, if not already, will add the Water-type to the Holder. Single use. Hidden Power is not effected.",
 	},
 	watermemory: {
 		name: "Water Memory",
