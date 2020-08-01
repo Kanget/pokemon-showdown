@@ -4407,7 +4407,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		spritenum: 344,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status' || move.name == 'hiddenpower') return;
+			if (target === source || move.category === 'Status' || move.name == 'hiddenpowerpoison') return;
 			if (move.type === 'Poison' && source.useItem()) {
 				source.addVolatile('gem');
 			}

@@ -7545,7 +7545,7 @@ export const BattlePokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Purugly",
 		types: ["Normal"],
 		genderRatio: {M: 0.25, F: 0.75},
-		baseStats: {hp: 91, atk: 105, def: 74, spa: 64, spd: 59, spe: 90},
+		baseStats: {hp: 91, atk: 105, def: 74, spa: 64, spd: 59, spe: 105},
 		abilities: {0: "Thick Fat", 1: "Intimidate", H: "Defiant"},
 		heightm: 1,
 		weightkg: 43.8,
