@@ -5822,10 +5822,9 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (target === source || move.category === 'Status' || move.flags['gemeffect']) return;
 			if (move.type === 'Steel' && source.useItem()) {
 				source.addVolatile('gem');
+				if (source.hasType('Steel') || !source.addType('Steel')) return false;
+				this.add('-start', source, 'typeadd', 'Steel', '[from] item: Steel Gem');
 			}
-			if (source.hasType('Steel')) return false;
-			if (!source.addType('Steel')) return false;
-			this.add('-start', source, 'typeadd', 'Steel', '[from] item: Steel Gem');
 		},
 		num: 563,
 		gen: 5,
