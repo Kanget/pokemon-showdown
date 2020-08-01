@@ -7250,8 +7250,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		onSourceTryPrimaryHit(target, source, move) {
 			const pledges = ['firepledge', 'grasspledge', 'waterpledge'];
 			if (target === source || move.category === 'Status' || pledges.includes(move.id)) return;
-			if (move.flags['gemeffect']) return;
-			if (move.type === 'Water' && source.useItem()) {
+			if (move.type === 'Water' && source.useItem() && !move.flags['gemeffect'] {
 				source.addVolatile('gem');
 			}
 			if (source.hasType('Water')) return false;
