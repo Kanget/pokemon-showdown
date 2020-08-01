@@ -18353,7 +18353,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			wish: ["8E", "7E", "6E", "5E", "8E", "8E"],
 			workup: ["8M", "7M", "5M"],
 			yawn: ["8E", "7E", "6E", "5E", "8E"],
-			adapunch: ["8M"],
+			adappunch: ["8M"],
 		},
 		eventData: [
 			{generation: 8, level: 80, gender: "F", nature: "Lonely", abilities: ["adaptability"], moves: ["covet", "bite", "helpinghand", "attract"], pokeball: "cherishball"},
