@@ -7248,7 +7248,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		spritenum: 528,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			const moveid = ['firepledge', 'grasspledge', 'waterpledge', 'hiddenpowerwater'];
+			const moveid = ['firepledge', 'grasspledge', 'waterpledge', 'hiddenpower'];
 			if (target === source || move.category === 'Status' || moveid.includes(move.id)) return;
 			if (move.type === 'Water' && source.useItem()) {
 				source.addVolatile('gem');
