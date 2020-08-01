@@ -2039,7 +2039,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (target === source || move.category === 'Status' || move.flags['gemeffect']) return;
 			if (move.type === 'Flying' && source.useItem()) {
 				source.addVolatile('gem');
-				if (source.hasType('Flying') || !source.addType('Flying') return;
+				if (source.hasType('Flying') || !source.addType('Flying')) return;
 				this.add('-start', source, 'typeadd', 'Flying', '[from] item: Flying Gem');
 			}
 		},
