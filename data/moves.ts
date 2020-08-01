@@ -18985,7 +18985,7 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	adappunch: {
-		num: 33,
+		num: -20,
 		accuracy: 100,
 		basePower: 90,
 		category: "Physical",
