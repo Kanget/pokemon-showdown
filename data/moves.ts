@@ -8575,6 +8575,9 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		onModifyType(move, pokemon) {
 			move.type = pokemon.hpType || 'Dark';
 		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -8593,6 +8596,9 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
 		secondary: null,
 		target: "normal",
 		type: "Bug",
@@ -8611,6 +8617,9 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -8629,6 +8638,9 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
 		secondary: null,
 		target: "normal",
 		type: "Dragon",
@@ -8647,6 +8659,9 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
 		secondary: null,
 		target: "normal",
 		type: "Electric",
@@ -8665,6 +8680,9 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fighting",
@@ -8683,6 +8701,9 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fire",
@@ -8701,6 +8722,9 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
 		secondary: null,
 		target: "normal",
 		type: "Flying",
@@ -8719,6 +8743,9 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
 		secondary: null,
 		target: "normal",
 		type: "Ghost",
@@ -8737,6 +8764,9 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
 		secondary: null,
 		target: "normal",
 		type: "Grass",
@@ -8755,6 +8785,9 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
 		secondary: null,
 		target: "normal",
 		type: "Ground",
@@ -8773,6 +8806,9 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
 		secondary: null,
 		target: "normal",
 		type: "Ice",
@@ -8791,6 +8827,9 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
 		secondary: null,
 		target: "normal",
 		type: "Poison",
@@ -8809,6 +8848,9 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
 		secondary: null,
 		target: "normal",
 		type: "Psychic",
@@ -8827,6 +8869,9 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
 		secondary: null,
 		target: "normal",
 		type: "Rock",
@@ -8845,6 +8890,9 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -8863,6 +8911,9 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
 		secondary: null,
 		target: "normal",
 		type: "Water",

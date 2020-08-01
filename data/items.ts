@@ -649,7 +649,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		spritenum: 53,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
+			if (target === source || move.category === 'Status' || move.name == 'hiddenpower') return;
 			if (move.type === 'Bug' && source.useItem()) {
 				source.addVolatile('gem');
 			}
@@ -1176,7 +1176,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		spritenum: 89,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
+			if (target === source || move.category === 'Status' || move.name == 'hiddenpower') return;
 			if (move.type === 'Dark' && source.useItem()) {
 				source.addVolatile('gem');
 			}
@@ -1387,7 +1387,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		spritenum: 107,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
+			if (target === source || move.category === 'Status' || move.name == 'hiddenpower') return;
 			if (move.type === 'Dragon' && source.useItem()) {
 				source.addVolatile('gem');
 			}
@@ -1791,7 +1791,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		spritenum: 611,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
+			if (target === source || move.category === 'Status' || move.name == 'hiddenpower') return;
 			if (move.type === 'Fairy' && source.useItem()) {
 				source.addVolatile('gem');
 			}
@@ -1833,7 +1833,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		spritenum: 139,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
+			if (target === source || move.category === 'Status' || move.name == 'hiddenpower') return;
 			if (move.type === 'Fighting' && source.useItem()) {
 				source.addVolatile('gem');
 			}
@@ -2048,7 +2048,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		spritenum: 149,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
+			if (target === source || move.category === 'Status' || move.name == 'hiddenpower') return;
 			if (move.type === 'Flying' && source.useItem()) {
 				source.addVolatile('gem');
 			}
@@ -2312,7 +2312,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		spritenum: 161,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
+			if (target === source || move.category === 'Status' || move.name == 'hiddenpower') return;
 			if (move.type === 'Ghost' && source.useItem()) {
 				source.addVolatile('gem');
 			}
@@ -2513,7 +2513,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		spritenum: 182,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
+			if (target === source || move.category === 'Status' || move.name == 'hiddenpower') return;
 			if (move.type === 'Ground' && source.useItem()) {
 				source.addVolatile('gem');
 			}
@@ -2733,7 +2733,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		spritenum: 218,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
+			if (target === source || move.category === 'Status' || move.name == 'hiddenpower') return;
 			if (move.type === 'Ice' && source.useItem()) {
 				source.addVolatile('gem');
 			}
@@ -4407,7 +4407,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		spritenum: 344,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
+			if (target === source || move.category === 'Status' || move.name == 'hiddenpower') return;
 			if (move.type === 'Poison' && source.useItem()) {
 				source.addVolatile('gem');
 			}
@@ -4669,7 +4669,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		spritenum: 369,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
+			if (target === source || move.category === 'Status' || move.name == 'hiddenpower') return;
 			if (move.type === 'Psychic' && source.useItem()) {
 				source.addVolatile('gem');
 			}
@@ -5002,7 +5002,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		spritenum: 415,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
+			if (target === source || move.category === 'Status' || move.name == 'hiddenpower') return;
 			if (move.type === 'Rock' && source.useItem()) {
 				source.addVolatile('gem');
 			}
@@ -5819,7 +5819,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		spritenum: 473,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
+			if (target === source || move.category === 'Status' || move.name == 'hiddenpower') return;
 			if (move.type === 'Steel' && source.useItem()) {
 				source.addVolatile('gem');
 			}
