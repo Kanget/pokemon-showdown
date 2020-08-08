@@ -423,14 +423,14 @@ export const Formats: (FormatsData | {section: string, column?: number})[] = [
 
 		mod: 'gen8',
 		searchShow: false,
-		ruleset: ['[Gen 8] National Dex Ubers', 'OHKO Clause','Dynamax Clause'],
+		ruleset: ['Standard NatDex', 'Evasion Moves Clause', 'Species Clause', 'Sleep Clause Mod', 'OHKO Clause','Dynamax Clause'],
 		banlist: [
 			// National Dex Ubers
 			'Alakazam-Mega', 'Arceus', 'Blastoise-Mega', 'Blaziken', 'Darkrai', 'Darmanitan-Galar', 'Deoxys-Attack', 'Deoxys-Base', 'Deoxys-Speed', 'Dialga',
 			'Eternatus', 'Genesect', 'Gengar-Mega', 'Giratina', 'Greninja-Ash', 'Groudon', 'Ho-Oh', 'Kyogre', 'Kyurem-Black', 'Kyurem-White',
 			'Landorus-Base', 'Lucario-Mega', 'Lugia', 'Lunala', 'Marshadow', 'Metagross-Mega', 'Mewtwo', 'Naganadel', 'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane',
 			'Palkia', 'Pheromosa', 'Rayquaza', 'Reshiram', 'Salamence-Mega', 'Shaymin-Sky', 'Solgaleo', 'Garchomp-Mega', 'Urshifu-Base', 'Xerneas', 'Yveltal',
-			'Zacian', 'Zamazenta', 'Zekrom', 'Arena Trap', 'Battle Bond', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass',
+			'Zacian', 'Zamazenta', 'Zekrom', 'Magearna', 'Magearna-Original', 'Cinderace', 'Arena Trap', 'Battle Bond', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass',
 		],
 	},
 	{
@@ -444,8 +444,8 @@ export const Formats: (FormatsData | {section: string, column?: number})[] = [
 		ruleset: ['[Gen 8] National Dex OU'],
 		banlist: [
 			// National Dex OU
-			'Blacephalon', 'Chansey', 'Charizard-Mega-Y', 'Cinderace', 'Clefable', 'Corviknight', 'Dracovish', 'Dragapult', 'Excadrill', 'Ferrothorn', 'Garchomp',
-			'Gliscor', 'Greninja', 'Heatran', 'Kartana', 'Kommo-o', 'Landorus-Therian', 'Lopunny-Mega', 'Magearna', 'Magearna-Original', 'Magnezone',
+			'Blacephalon', 'Chansey', 'Charizard-Mega-Y', 'Clefable', 'Corviknight', 'Dracovish', 'Dragapult', 'Excadrill', 'Ferrothorn', 'Garchomp',
+			'Gliscor', 'Greninja', 'Heatran', 'Kartana', 'Kommo-o', 'Landorus-Therian', 'Lopunny-Mega', 'Magnezone',
 			'Melmetal', 'Pelipper', 'Rillaboom', 'Scizor-Mega', 'Serperior', 'Slowbro-Base', 'Slowbro-Mega', 'Swampert-Mega', 'Tangrowth', 'Tapu Fini', 'Tapu Koko',
 			'Tapu Lele', 'Toxapex', 'Volcanion', 'Volcarona', 'Zapdos','Butterfree-Mega', 'Bisharp-Mega', 'Flygon-Mega', 'Meganium',
 			'nduubl', // National Dex UUBL
