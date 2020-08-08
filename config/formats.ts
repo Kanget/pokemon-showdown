@@ -414,7 +414,7 @@ export const Formats: (FormatsData | {section: string, column?: number})[] = [
 		banlist: ['Rayquaza-Mega'],
 	},
 	{
-		name: "[Gen 8] National Dex OU",
+		name: "[Gen 8] National Dex",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3656899/">National Dex Metagame Discussion</a>`,
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3658849/">National Dex Sample Teams</a>`,
@@ -441,7 +441,7 @@ export const Formats: (FormatsData | {section: string, column?: number})[] = [
 
 		mod: 'gen8',
 		searchShow: false,
-		ruleset: ['[Gen 8] National Dex OU'],
+		ruleset: ['[Gen 8] National Dex'],
 		banlist: [
 			// National Dex OU
 			'Blacephalon', 'Chansey', 'Charizard-Mega-Y', 'Clefable', 'Corviknight', 'Dracovish', 'Dragapult', 'Excadrill', 'Ferrothorn', 'Garchomp',
