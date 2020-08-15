@@ -3265,6 +3265,26 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 		rating: 1.5,
 		num: 155,
 	},
+	ranger: {
+		desc: "This Pokemon's Non-Contact Moves have their power and accuracy boosted by 1.2x",
+		shortDesc: "This Pokemon's Non-Contact Moves are 1.2x more powerful and accurate",
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.tags['contact']) {
+				move.rangerBoosted = true;
+				move.accuracy *= 0.8;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.rangerBoosted) {
+				return this.chainModify([0x1333, 0x1000]);
+			}
+		},
+		name: "Ranger",
+		rating: 0,
+		num: -123
+	},
 	receiver: {
 		desc: "This Pokemon copies the Ability of an ally that faints. Abilities that cannot be copied are Flower Gift, Forecast, Gulp Missile, Hunger Switch, Ice Face, Illusion, Imposter, Multitype, Neutralizing Gas, Stance Change, Trace, Wonder Guard, and Zen Mode.",
 		shortDesc: "This Pokemon copies the Ability of an ally that faints.",
