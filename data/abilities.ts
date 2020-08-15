@@ -3270,7 +3270,7 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 		shortDesc: "This Pokemon's Non-Contact Moves are 1.2x more powerful and accurate",
 		onModifyMovePriority: -1,
 		onModifyMove(move) {
-			if (move.tags['contact']) {
+			if (move.flags['contact']) {
 				move.rangerBoosted = true;
 				move.accuracy *= 0.8;
 			}
