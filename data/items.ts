@@ -1166,6 +1166,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		fling: {
 			basePower: 60,
 		},
+		forcedForme: "Castform-Rainy",
 		num: 285,
 		gen: 4,
 		desc: "Holder's use of Rain Dance lasts 8 turns instead of 5.",
@@ -2605,6 +2606,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		fling: {
 			basePower: 60,
 		},
+		forcedForme: "Castform-Sunny",
 		num: 284,
 		gen: 4,
 		desc: "Holder's use of Sunny Day lasts 8 turns instead of 5.",
@@ -2792,6 +2794,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		fling: {
 			basePower: 40,
 		},
+		forcedForme: "Castform-Snowy",
 		num: 282,
 		gen: 4,
 		desc: "Holder's use of Hail lasts 8 turns instead of 5.",
@@ -5563,6 +5566,7 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 		fling: {
 			basePower: 10,
 		},
+		forcedForme: "Castform-Sandy",
 		num: 283,
 		gen: 4,
 		desc: "Holder's use of Sandstorm lasts 8 turns instead of 5.",

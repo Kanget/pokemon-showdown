@@ -3441,8 +3441,8 @@ export const BattleAbilities: {[abilityid: string]: AbilityData} = {
 		num: 24,
 	},
 	runaway: {
-		desc: "The Pokemon is immune to any form of trapping, be it from move or ability.",
-		shortDesc: "The User is not able to be trapped by any ability or move",
+		desc: "The Pokemon is immune to any form of trapping, be it from move or ability. The Pokemon has priority on switch out moves",
+		shortDesc: "The User is not able to be trapped by any ability or move, along with priority to switch moves",
 		onTrapPokemonPriority: -10,
 		onTrapPokemon(pokemon) {
 			pokemon.trapped = pokemon.maybeTrapped = false;

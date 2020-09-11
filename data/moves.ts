@@ -1075,6 +1075,11 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		pp: 40,
 		priority: 0,
 		flags: {},
+		onModifyPriority(priority, source, target, move) {
+		if (pokemon.hasAbility(['runaway'])) {	
+				return priority + 1;
+			}
+		},
 		selfSwitch: 'copyvolatile',
 		secondary: null,
 		target: "self",
@@ -5655,6 +5660,11 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onModifyPriority(priority, source, target, move) {
+		if (pokemon.hasAbility(['runaway'])) {	
+				return priority + 1;
+			}
+		},
 		selfSwitch: true,
 		secondary: null,
 		target: "normal",
@@ -13311,6 +13321,11 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, authentic: 1},
+		onModifyPriority(priority, source, target, move) {
+		if (pokemon.hasAbility(['runaway'])) {	
+				return priority + 1;
+			}
+		},
 		onHit(target, source, move) {
 			const success = this.boost({atk: -1, spa: -1}, target, source);
 			if (!success && !target.hasAbility('mirrorarmor')) {
@@ -16511,6 +16526,54 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		zMove: {effect: 'clearnegativeboost'},
 		contestType: "Beautiful",
 	},
+	cooldown: {
+		num: 659,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		desc: "The user restores 1/2 of its maximum HP, rounded half down. If the weather is Hail, the user instead restores 2/3 of its maximum HP, rounded half down.",
+		shortDesc: "User restores 1/2 its max HP; 2/3 in Hail.",
+		name: "Cool Down",
+		pp: 10,
+		priority: 0,
+		flags: {snatch: 1, heal: 1},
+		onHit(pokemon) {
+			let factor = 0.5;
+			if (this.field.isWeather('hail')) {
+				factor = 0.667;
+			}
+			return !!this.heal(this.modify(pokemon.maxhp, factor));
+		},
+		secondary: null,
+		target: "self",
+		type: "Ice",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Beautiful",
+	},
+	hydrolosis: {
+		num: 659,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		desc: "The user restores 1/2 of its maximum HP, rounded half down. If the weather is Rain, the user instead restores 2/3 of its maximum HP, rounded half down.",
+		shortDesc: "User restores 1/2 its max HP; 2/3 in Rain.",
+		name: "Hydrolosis"
+		pp: 10,
+		priority: 0,
+		flags: {snatch: 1, heal: 1},
+		onHit(pokemon) {
+			let factor = 0.5;
+			if (this.field.isWeather('rain')) {
+				factor = 0.667;
+			}
+			return !!this.heal(this.modify(pokemon.maxhp, factor));
+		},
+		secondary: null,
+		target: "self",
+		type: "Ground",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Beautiful",
+	},
 	signalbeam: {
 		num: 324,
 		accuracy: 100,
@@ -19385,6 +19448,11 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: -6,
 		flags: {},
+		onModifyPriority(priority, source, target, move) {
+		if (pokemon.hasAbility(['runaway'])) {	
+				return priority + 1;
+			}
+		},
 		selfSwitch: true,
 		onTryHit: true,
 		secondary: null,
@@ -20220,6 +20288,11 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onModifyPriority(priority, source, target, move) {
+		if (pokemon.hasAbility(['runaway'])) {	
+				return priority + 1;
+			}
+		},
 		selfSwitch: true,
 		secondary: null,
 		target: "normal",
@@ -20440,6 +20513,11 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyPriority(priority, source, target, move) {
+		if (pokemon.hasAbility(['runaway'])) {	
+				return priority + 1;
+			}
+		},
 		selfSwitch: true,
 		secondary: null,
 		target: "normal",
