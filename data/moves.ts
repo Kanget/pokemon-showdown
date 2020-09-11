@@ -16557,7 +16557,7 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		category: "Status",
 		desc: "The user restores 1/2 of its maximum HP, rounded half down. If the weather is Rain, the user instead restores 2/3 of its maximum HP, rounded half down.",
 		shortDesc: "User restores 1/2 its max HP; 2/3 in Rain.",
-		name: "Hydrolosis"
+		name: "Hydrolosis",
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1, heal: 1},
